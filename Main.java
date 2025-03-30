@@ -23,10 +23,17 @@ public class Main {
             option = scanner.nextInt();
 
             switch(option){
+                case 6 -> checkIfHasPetInMachine();
                 case 7 -> setPetInPetMachine();
-                case 8 -> 
+                case 8 -> petMachine.removePet();
+                case 9 -> petMachine.wash();
             }
         } while (option != 0);
+    }
+
+    private static void checkIfHasPetInMachine(){
+        var hasPet = petMachine.hasPet();
+        System.out.println(hasPet ? "Tem pet na máquina" : "Não tem pet na máquina");
     }
 
     public static void setPetInPetMachine(){
@@ -40,7 +47,5 @@ public class Main {
         System.out.println("O pet" + pet.getName() + "foi colocado na máquina");
     }
 
-    public void getPetFromMachine(){
-        
-    }
+    
 }
