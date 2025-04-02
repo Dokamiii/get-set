@@ -1,3 +1,7 @@
+import domain.Employee;
+import domain.Manager;
+import domain.Salesman;
+
 public class Main{
     public static void main(String[] args) {
         printEmployee(new Manager());
@@ -7,15 +11,6 @@ public class Main{
     public static void printEmployee(Employee employee){
 
         System.out.println(employee.getClass().getCanonicalName());
-            if(employee instanceof Manager manager) {
-                employee.setName("João");
-                manager.setLogin("joao");
-                manager.setPassaword("123456");
-        
-                System.err.println(employee.getName());
-                System.err.println(manager.getLogin());
-                System.err.println(manager.getPassaword());
-            }
             switch (employee) {
                 case Manager manager ->{
                     employee.setCode("123");
@@ -24,12 +19,14 @@ public class Main{
                     manager.setLogin("joao");
                     manager.setPassaword("123456");
                     manager.setCommission(1200);
+                    
 
                     System.out.println(employee.getCode());
                     System.out.println(employee.getSalary());
                     System.out.println(employee.getName());
                     System.out.println(manager.getLogin());
                     System.out.println(manager.getPassaword());
+                    System.out.println(manager.getFullSalary());
                 }
                 case Salesman salesman -> {
                     salesman.setCode("456");

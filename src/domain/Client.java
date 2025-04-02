@@ -1,3 +1,4 @@
+package domain;
 public class Client {
     private String document;
 
